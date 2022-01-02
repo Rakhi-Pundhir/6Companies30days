@@ -19,4 +19,12 @@ Also check if either rectangle is just a line.
 ***Count the subarrays having product less than k***
 We can use nested loops and form all subarrays then compare which subarray gives product less than k but time complexity would then be n squared so we optimize this using sliding window method.We calculate the product of elements in the window then move the window by one element, if product now becomes equal or greater than k we move the left point of the window and delete its entry by division else we add the number of elements in the answer variable and move the right point of the window.
 
+**Q-4 (C1q4)**\
+***Run Length Encoding***
+We traverse the string and count the occurences of every character then append that string character and its count to the result string then return it.
+
+**Q-5 (C1q5)**\
+***Program to find Nth Ugly Number**
+We are using dynamic programming to find an efficient solution for this problem.We keep on storing the ugly numbers in an array by choosing the minimum of three factors that are multiples of 2,3 or 5.Then we increment the pointer which gives the minimum factor to be stored as an ugly number.
+
 
