@@ -27,4 +27,8 @@ We traverse the string and count the occurences of every character then append t
 ***Program to find Nth Ugly Number**
 We are using dynamic programming to find an efficient solution for this problem.We keep on storing the ugly numbers in an array by choosing the minimum of three factors that are multiples of 2,3 or 5.Then we increment the pointer which gives the minimum factor to be stored as an ugly number.
 
+**Q-6 (C1q6)**\
+***Greatest Common Divisor of Strings**
+First we will check if both strings have a gcd or not and for that addition of string 1 to string 2 must be equal to addition of string 2 to string 1 else we return an empty string.In case it is so, then we will simply calculate the gcd of their lengths as they are only repetitions of each other and then return substring of any string with number of characters equal to the calculated gcd.
+
 
