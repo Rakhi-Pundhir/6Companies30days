@@ -22,6 +22,8 @@ We can use nested loops and form all subarrays then compare which subarray gives
 **Q-4 (C1q4)**\
 ***Run Length Encoding***
 We traverse the string and count the occurences of every character then append that string character and its count to the result string then return it.
+OR 
+We can make use of maps in STL. Create a map with characters as keys and integer as values then insert each characeter of the string into it and increment the count of that key as you traverse the string and encounter it.At last pop all key value pairs and append them to an empty string,use to_string function to convert integer count of characters into string so that they can be added to the answer string.
 
 **Q-5 (C1q5)**\
 ***Program to find Nth Ugly Number**
@@ -30,5 +32,9 @@ We are using dynamic programming to find an efficient solution for this problem.
 **Q-6 (C1q6)**\
 ***Greatest Common Divisor of Strings**
 First we will check if both strings have a gcd or not and for that addition of string 1 to string 2 must be equal to addition of string 2 to string 1 else we return an empty string.In case it is so, then we will simply calculate the gcd of their lengths as they are only repetitions of each other and then return substring of any string with number of characters equal to the calculated gcd.
+
+**Q-9 (C1q9)**\
+***Number following a pattern**
+We can use stack to solve this problem.Here, we are making splits at each I encountered and then reverse the count for each D.Create a stack of characters and as you traverse the string push a number initialized with 1 into it and increase it by 1 and for each I do the same but also pop all elements from stack and add to the answer string.At last push the number and pop all.
 
 
