@@ -37,4 +37,20 @@ First we will check if both strings have a gcd or not and for that addition of s
 ***Number following a pattern**
 We can use stack to solve this problem.Here, we are making splits at each I encountered and then reverse the count for each D.Create a stack of characters and as you traverse the string push a number initialized with 1 into it and increase it by 1 and for each I do the same but also pop all elements from stack and add to the answer string.At last push the number and pop all.
 
+**Q-12 (C1q12)**\
+*** Find total number of Squares in a N*N chessboard**
+If we calculate the total numers of squares in n*n chessboard it comes out to be 1^2 + 2^2 + 3^3 +.....n^2 which is equal to n*(n+1)*(2n+1)/6 but using this formula may give error so we write it in a different way like n*(n+1)/2 * (2*n+1)/3 as n*(n+1) will always be divisible by 2.
+
+**Q-13 (C1q13)**\
+*** Decode the string**
+We are using a stack of characters to push each element of string except ']' as on encountering this character we have to start decoding the string.We will pop all characters out of stack until we get an opening bracket and then add the popped characters to an empty string and push it into the stack and then we will use a loop to multiply that string to itself k times.At last we will pop all characters from stack and add them to an empty answer string and then return it.
+
+**Q-14 (C1q14)**\
+*** Minimum Size Subarray Sum**
+We have used sliding window method here.We have to keep a sum variable and add an element of the array.We keep on increasing the size of window till the sum is lesser than the target and in case the sum becomes equal or greater than the target we keep decreasing the size from left end to get the minimum size subarray and update the length variable.
+
+**Q-15 (C1q15)**\
+*** Array Pair Sum Divisibility Problem**
+Here we are using the technique of remainders so we create a map that keeps frequency of remainders obtained by dividing each element of the array by the given number k.Then in case the remainder is zero and it is odd in frequency, we will return false since then it cannot form pairs.Also the case is same with frequency of k/2 remainder as it requires another number to form pairs.In all other cases any remainder x can be added to the remainder k-x to get divided by the target k so their frequency should match.In case it doesn't we return fale else we return true. 
+
 
