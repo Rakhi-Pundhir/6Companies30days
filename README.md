@@ -53,4 +53,7 @@ We have used sliding window method here.We have to keep a sum variable and add a
 *** Array Pair Sum Divisibility Problem**
 Here we are using the technique of remainders so we create a map that keeps frequency of remainders obtained by dividing each element of the array by the given number k.Then in case the remainder is zero and it is odd in frequency, we will return false since then it cannot form pairs.Also the case is same with frequency of k/2 remainder as it requires another number to form pairs.In all other cases any remainder x can be added to the remainder k-x to get divided by the target k so their frequency should match.In case it doesn't we return fale else we return true. 
 
+**Q-7 (C1q7)**\
+*** Find the kid which gets tha damaged toy**
+We can use a loop for this and iterate for m items and increment k till it becomes greater than n so that we can again initialize it to 1 as we are traversing a circle.Also, we can simply use the formula-(k+m-1)%n which is similar to the case of distributing in a straight line.
 
