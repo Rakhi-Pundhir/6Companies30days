@@ -57,3 +57,12 @@ Here we are using the technique of remainders so we create a map that keeps freq
 *** Find the kid which gets tha damaged toy**
 We can use a loop for this and iterate for m items and increment k till it becomes greater than n so that we can again initialize it to 1 as we are traversing a circle.Also, we can simply use the formula-(k+m-1)%n which is similar to the case of distributing in a straight line.
 
+**Q-8 (C1q8)**\
+***Total Decoding Messages**
+If the string has leading zeroes or if the length of string is zero we return zero.Also, here we have used the method to add the count of the current digit decoding to the previous counts if it is valid and also add its count to the previous to previous counts in case the two digits are also valid.Then we update the counter pointers and move further in the string.
+
+**Q-11 (C1q11)**\
+***Given an unsorted array Arr of size N of positive integers.One number 'A' from set {1, 2, …N} is missing and one number 'B' occurs twice in array.Find these two numbers.**
+Here we have used maps in STL to store the count of every number and then we check if an element is not present in the range 1 to n in the map that means the number is missing and if it is present then we check for the count is greater than 1 as then it would be our repeating number.
+
+
