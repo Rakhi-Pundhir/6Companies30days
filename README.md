@@ -69,6 +69,18 @@ We have used sliding window method here.We have to keep a sum variable and add a
 ***Array Pair Sum Divisibility Problem***
 Here we are using the technique of remainders so we create a map that keeps frequency of remainders obtained by dividing each element of the array by the given number k.Then in case the remainder is zero and it is odd in frequency, we will return false since then it cannot form pairs.Also the case is same with frequency of k/2 remainder as it requires another number to form pairs.In all other cases any remainder x can be added to the remainder k-x to get divided by the target k so their frequency should match.In case it doesn't we return fale else we return true. 
 
+## Amazon Questions
+**Q-2 (C2q2)**\
+***Longest Mountain***
+We use peak and valley method here.We start counting for peak and valley once we get a peak ie. a value is lesser than its succeeding value.Till the time it is so we keep peak as true ans move on and till we get a valley i.e. a value is greater than its succeeeding value we keep valley as true and move on.In case we get both peak and valley as true at the same time it means we have covered a mountain so we then calculate its length and compare it with initial length of an mountain.
+
+**Q-3 (C2q3)**\
+***IPL 2021 - Match Day 2***
+We have to just find the maximum of all subarrays here and for that we will use sliding window method.We start with the first index and increment it until we get the size of window given in the question.Till window size is less than k we keep pushing the elements for future use in a queue to get another maximum incase the window slides and earlier maximum element is not included now.So, when the size hits we calculate our maximum present at front and then remove it calculations from queue if this gave the maximum value then we slide the window.Finally, the maximum of all windows will lie on the front of this queue.
+
+**Q-6 (C2q6)**\
+***Maximum of all subarrays of size k***
+We have to just find the maximum of all subarrays here and for that we will use sliding window method.We start with the first index and increment it until we get the size of window given in the question.Till window size is less than k we keep pushing the elements for future use in a queue to get another maximum incase the window slides and earlier maximum element is not included now.So, when the size hits we calculate our maximum present at front and then remove it calculations from queue if this gave the maximum value then we slide the window.Finally, the maximum of all windows will lie on the front of this queue.
 
 
 
