@@ -82,7 +82,13 @@ We have to just find the maximum of all subarrays here and for that we will use 
 ***Maximum of all subarrays of size k***
 We have to just find the maximum of all subarrays here and for that we will use sliding window method.We start with the first index and increment it until we get the size of window given in the question.Till window size is less than k we keep pushing the elements for future use in a queue to get another maximum incase the window slides and earlier maximum element is not included now.So, when the size hits we calculate our maximum present at front and then remove it calculations from queue if this gave the maximum value then we slide the window.Finally, the maximum of all windows will lie on the front of this queue.
 
+**Q-11 (C2q11)**\
+***Tree Serialization and Deserialization***
+We note that whichever traversal method we use in the serialize function to generate the array it will be passed to the deserialize function and then we have to construct the tree accordingly.So, here we have used preorder traversal and as when we build the tree we can take the first element of the array as root of the tree and then continue the process further for the other values of the array.In case there is a NULL we have to insert -1 in the array to check it in the desrialize function so as to check for NULL left or right child and also if the array size is zero initially that would mean the tree is empty so we return NULL.
 
+**Q-13 (C2q13)**\
+***Rotten Oranges***
+We will be using BFS technique to traverse all adjacent oranges of any rotten orange.We start with pushing all rotten oranges into the queue then pop them one by one and visit their adjacent cells, if the cell contains a fresh orange(1) push it to the queue and mark it as rotten(2), when the queue becomes empty, stop.Then check if the total number of oranges(calculated by traversing the matrix) is equal to the number of oranges pushed into queue(since queue has only rotten oranges) then return time(incremented after processing oranges at a time) else return -1(i.e. it is impossible to rot all fresh oranges).Also, to calculate or visit nodes of a rotten orange we have used the concept of calculating next row and column by adding the row number or column number to the existing number.
 
 
 
