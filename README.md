@@ -86,9 +86,34 @@ We have to just find the maximum of all subarrays here and for that we will use 
 ***Tree Serialization and Deserialization***
 We note that whichever traversal method we use in the serialize function to generate the array it will be passed to the deserialize function and then we have to construct the tree accordingly.So, here we have used preorder traversal and as when we build the tree we can take the first element of the array as root of the tree and then continue the process further for the other values of the array.In case there is a NULL we have to insert -1 in the array to check it in the desrialize function so as to check for NULL left or right child and also if the array size is zero initially that would mean the tree is empty so we return NULL.
 
+**Q-12 (C2q12)**\
+***Column name from a given column number***
+Wehave used basic maths here,first find out the remainder(given number modulo 26) then remainder could either be zero or non-zero.If it is zero we insert 'Z' to the first index and move to the next index while updating value of the given number using division.In case it is non-zero, we insert the corresponding character at the index and increment the index while updating the value.
+
+**Q-7 (C2q7)**\
+***First non-repeating character in a stream***
+
+
+**Q-8 (C2q8)**\
+***.Count ways to N'th Stair(Order does not matter)***
+This was easiest problem I guess,since the order does not matter here, all we do is increment the ways by one when m is even.
+
+**Q-9 (C2q9)**\
+***Which among them forms a perfect Sudoku Pattern ?***
+We check if the given sudoku satisfies the following three conditions or not to become valid-each of the row should contain unique values from 1-9,each column should contain unique values from 1-9,each submatrix should contain unique values from 1-9.When the cell doesnot contain a zero we check for these conditons else we move to the next cell.
+
+**Q-10 (C2q10)**\
+***Nuts and Bolts***
+We are using quick sort for solving this problem like in quick sort we take a pivot element and divide the array into two sections, one is from starting to the pivot and the other is from the pivot to the end but pivot is not included anywhere.Then we use recurion to perform the same task with both the sections.
+
 **Q-13 (C2q13)**\
 ***Rotten Oranges***
 We will be using BFS technique to traverse all adjacent oranges of any rotten orange.We start with pushing all rotten oranges into the queue then pop them one by one and visit their adjacent cells, if the cell contains a fresh orange(1) push it to the queue and mark it as rotten(2), when the queue becomes empty, stop.Then check if the total number of oranges(calculated by traversing the matrix) is equal to the number of oranges pushed into queue(since queue has only rotten oranges) then return time(incremented after processing oranges at a time) else return -1(i.e. it is impossible to rot all fresh oranges).Also, to calculate or visit nodes of a rotten orange we have used the concept of calculating next row and column by adding the row number or column number to the existing number.
+
+
+
+
+
 
 
 
