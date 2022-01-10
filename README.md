@@ -70,6 +70,11 @@ We have used sliding window method here.We have to keep a sum variable and add a
 Here we are using the technique of remainders so we create a map that keeps frequency of remainders obtained by dividing each element of the array by the given number k.Then in case the remainder is zero and it is odd in frequency, we will return false since then it cannot form pairs.Also the case is same with frequency of k/2 remainder as it requires another number to form pairs.In all other cases any remainder x can be added to the remainder k-x to get divided by the target k so their frequency should match.In case it doesn't we return fale else we return true. 
 
 ## Amazon Questions
+
+**Q-1 (C2q1)**\
+***Maximum Profit***
+We are using dynamic programming here as it will give us the previous transactions and then we can find out the last one.Here, memset is used which is just a function to copy zero to all eleemnts of the dp array.
+
 **Q-2 (C2q2)**\
 ***Longest Mountain***
 We use peak and valley method here.We start counting for peak and valley once we get a peak ie. a value is lesser than its succeeding value.Till the time it is so we keep peak as true ans move on and till we get a valley i.e. a value is greater than its succeeeding value we keep valley as true and move on.In case we get both peak and valley as true at the same time it means we have covered a mountain so we then calculate its length and compare it with initial length of an mountain.
@@ -77,6 +82,14 @@ We use peak and valley method here.We start counting for peak and valley once we
 **Q-3 (C2q3)**\
 ***IPL 2021 - Match Day 2***
 We have to just find the maximum of all subarrays here and for that we will use sliding window method.We start with the first index and increment it until we get the size of window given in the question.Till window size is less than k we keep pushing the elements for future use in a queue to get another maximum incase the window slides and earlier maximum element is not included now.So, when the size hits we calculate our maximum present at front and then remove it calculations from queue if this gave the maximum value then we slide the window.Finally, the maximum of all windows will lie on the front of this queue.
+
+**Q-4 (C2q4)**\
+***Brackets in Matrix Chain Multiplication***
+We use the logic that the number of multiplications when multiplying a matrix with another is equal to the number of rows* then number of columns* the number from which the total cells are obtained and then we compare for the minimum value.
+
+**Q-5 (C2q5)**\
+***Phone Directory***
+We have used a set from STL to store the contacts uniquely and then we traverse the string of contacts and insert all into the set.Then we traverse the given string to compare its each character with the available strings and if the character matches we add it to the answer string.In case the size of that array is zero we add a 0 to the answer string.
 
 **Q-6 (C2q6)**\
 ***Maximum of all subarrays of size k***
@@ -92,11 +105,11 @@ Wehave used basic maths here,first find out the remainder(given number modulo 26
 
 **Q-7 (C2q7)**\
 ***First non-repeating character in a stream***
-
+We use queue data structure to store non repeating character of the string.We then traverse the string and increase the count of encountered character if it is one then we push it into the queue and then pop that element from the queue which has higher frequency than 1,if now the queue becomes empty that means there is no non-repeating character so we append a # else we append the first character to the string.
 
 **Q-8 (C2q8)**\
 ***.Count ways to N'th Stair(Order does not matter)***
-This was easiest problem I guess,since the order does not matter here, all we do is increment the ways by one when m is even.
+This was the easiest problem I guess,since the order does not matter here, all we do is increment the ways by one when m is even.
 
 **Q-9 (C2q9)**\
 ***Which among them forms a perfect Sudoku Pattern ?***
@@ -110,9 +123,13 @@ We are using quick sort for solving this problem like in quick sort we take a pi
 ***Rotten Oranges***
 We will be using BFS technique to traverse all adjacent oranges of any rotten orange.We start with pushing all rotten oranges into the queue then pop them one by one and visit their adjacent cells, if the cell contains a fresh orange(1) push it to the queue and mark it as rotten(2), when the queue becomes empty, stop.Then check if the total number of oranges(calculated by traversing the matrix) is equal to the number of oranges pushed into queue(since queue has only rotten oranges) then return time(incremented after processing oranges at a time) else return -1(i.e. it is impossible to rot all fresh oranges).Also, to calculate or visit nodes of a rotten orange we have used the concept of calculating next row and column by adding the row number or column number to the existing number.
 
+**Q-14 (C2q14)**\
+***Tree Burning***
+This is similar to the rotten oranges problem here we insert burnt nodes in the queue starting with the target node and visit its adjacenct nodes ie. left child,right child and parent.Since we have no direct link to the parent of that node we have to maintain a map initially that would store parents of all nodes and to find  the target node we can traverse the tree.
 
-
-
+**Q-15 (C2q15)**\
+***Delete N nodes after M nodes of a linked list***
+We take a pointer initialize it with the head and traverse the linked list.We also maintain a counter variable which is zero initially and increment it as we move forward in the list.Till our counter variable is not equal to M we increment temp and when it becomes equal to M we have to delete N nodes from that point.To delete N nodes we simply change the address in the next field of prevoius node with the address mentioned in the Nth node.After this, we put the counter variable to zero again so that we can again count the M nodes to be skipped.
 
 
 
