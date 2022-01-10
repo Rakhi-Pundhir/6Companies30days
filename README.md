@@ -95,14 +95,6 @@ We have used a set from STL to store the contacts uniquely and then we traverse 
 ***Maximum of all subarrays of size k***
 We have to just find the maximum of all subarrays here and for that we will use sliding window method.We start with the first index and increment it until we get the size of window given in the question.Till window size is less than k we keep pushing the elements for future use in a queue to get another maximum incase the window slides and earlier maximum element is not included now.So, when the size hits we calculate our maximum present at front and then remove it calculations from queue if this gave the maximum value then we slide the window.Finally, the maximum of all windows will lie on the front of this queue.
 
-**Q-11 (C2q11)**\
-***Tree Serialization and Deserialization***
-We note that whichever traversal method we use in the serialize function to generate the array it will be passed to the deserialize function and then we have to construct the tree accordingly.So, here we have used preorder traversal and as when we build the tree we can take the first element of the array as root of the tree and then continue the process further for the other values of the array.In case there is a NULL we have to insert -1 in the array to check it in the desrialize function so as to check for NULL left or right child and also if the array size is zero initially that would mean the tree is empty so we return NULL.
-
-**Q-12 (C2q12)**\
-***Column name from a given column number***
-Wehave used basic maths here,first find out the remainder(given number modulo 26) then remainder could either be zero or non-zero.If it is zero we insert 'Z' to the first index and move to the next index while updating value of the given number using division.In case it is non-zero, we insert the corresponding character at the index and increment the index while updating the value.
-
 **Q-7 (C2q7)**\
 ***First non-repeating character in a stream***
 We use queue data structure to store non repeating character of the string.We then traverse the string and increase the count of encountered character if it is one then we push it into the queue and then pop that element from the queue which has higher frequency than 1,if now the queue becomes empty that means there is no non-repeating character so we append a # else we append the first character to the string.
@@ -118,6 +110,14 @@ We check if the given sudoku satisfies the following three conditions or not to 
 **Q-10 (C2q10)**\
 ***Nuts and Bolts***
 We are using quick sort for solving this problem like in quick sort we take a pivot element and divide the array into two sections, one is from starting to the pivot and the other is from the pivot to the end but pivot is not included anywhere.Then we use recurion to perform the same task with both the sections.
+
+**Q-11 (C2q11)**\
+***Tree Serialization and Deserialization***
+We note that whichever traversal method we use in the serialize function to generate the array it will be passed to the deserialize function and then we have to construct the tree accordingly.So, here we have used preorder traversal and as when we build the tree we can take the first element of the array as root of the tree and then continue the process further for the other values of the array.In case there is a NULL we have to insert -1 in the array to check it in the desrialize function so as to check for NULL left or right child and also if the array size is zero initially that would mean the tree is empty so we return NULL.
+
+**Q-12 (C2q12)**\
+***Column name from a given column number***
+Wehave used basic maths here,first find out the remainder(given number modulo 26) then remainder could either be zero or non-zero.If it is zero we insert 'Z' to the first index and move to the next index while updating value of the given number using division.In case it is non-zero, we insert the corresponding character at the index and increment the index while updating the value.
 
 **Q-13 (C2q13)**\
 ***Rotten Oranges***
